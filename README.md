@@ -1,46 +1,48 @@
-# Kolekcje w Javie – Pomiar Wydajności
+# Java Collections – Performance Measurement
 
-## Opis projektu
+## Project Description
 
-Ten projekt służy do **porównywania wydajności podstawowych kolekcji w Javie** (`ArrayList`, `LinkedList`, `HashSet`, `TreeSet`) dla różnych typów danych (m.in. `Integer`, `Double`, `Person`, `Student`, `MyColor`, `Book`). Program umożliwia testowanie operacji takich jak:
+This project compares the performance of basic Java collections (`ArrayList`, `LinkedList`, `HashSet`, `TreeSet`) for different data types (including `Integer`, `Double`, `Person`, `Student`, `MyColor`, `Book`). The program allows testing operations such as:
 
-- odczyt po indeksie,
-- częstotliwość dodawania i usuwania elementów,
-- wyszukiwanie elementu,
-- sprawdzenie, czy element istnieje w kolekcji.
+- Reading by index
+- Frequency of adding and removing elements
+- Searching for an element
+- Checking if an element exists in the collection
 
-Projekt został napisany z użyciem zasady SOLID i podziału na interfejsy i klasy implementujące:
+The project is designed following SOLID principles with separation into interfaces and implementing classes:
 
-- `CollectionDataGenerator` – generowanie danych losowych do kolekcji,
-- `CollectionPerformanceTester` – przeprowadzanie testów wydajnościowych,
-- `TestResultPrinter` – prezentacja wyników (konsola lub plik CSV).
+- `CollectionDataGenerator` – generates random data for collections
+- `CollectionPerformanceTester` – performs performance tests
+- `TestResultPrinter` – presents results (console output or CSV file)
 
-## Jak to działa?
+## How it works
 
-1. **Użytkownik wybiera z konsoli:**
-   - typ danych (`INTEGER`, `DOUBLE`, `PERSON`, `STUDENT`, `MYCOLOR`, `BOOK`),
-   - typ kolekcji (`ARRAYLIST`, `LINKEDLIST`, `HASHSET`, `TREESET`),
-   - rozmiar kolekcji,
-   - rodzaj testu (`READBYINDEX`, `ADDREMOVEFREQUENCY`, `SEARCHOFELEMENT`, `ISINCOLLECTION`),
-   - sposób prezentacji wyników (`CSV`, `CONSOLEPRINT`).
+The user selects from the console:
 
-2. **Program:**
-   - generuje kolekcję z losowymi danymi,
-   - wykonuje wybrany test na tej kolekcji,
-   - zapisuje lub drukuje wynik (czas wykonania i ewentualne informacje pomocnicze).
+- Data type (`INTEGER`, `DOUBLE`, `PERSON`, `STUDENT`, `MYCOLOR`, `BOOK`)
+- Collection type (`ARRAYLIST`, `LINKEDLIST`, `HASHSET`, `TREESET`)
+- Collection size
+- Test type (`READBYINDEX`, `ADDREMOVEFREQUENCY`, `SEARCHOFELEMENT`, `ISINCOLLECTION`)
+- Result presentation method (`CSV`, `CONSOLEPRINT`)
 
-## Przykład danych
+The program then:
 
-Dla typu `STUDENT` lub `BOOK` program wykorzystuje własne klasy z zaimplementowanymi metodami `equals`, `hashCode` i `compareTo`, dzięki czemu możliwe jest ich poprawne użycie w strukturach takich jak `TreeSet`.
+- Generates a collection filled with random data
+- Performs the selected test on that collection
+- Saves or prints the result (execution time and optional additional information)
 
-## Technologie
+## Sample data
+
+For the `STUDENT` or `BOOK` types, the program uses custom classes with implemented `equals`, `hashCode`, and `compareTo` methods, enabling their correct use in structures like `TreeSet`.
+
+## Technologies
 
 - Java 17+
-- API standardowe (`java.util`, `java.io`)
-- Obsługa strumieni (`Stream API`)
+- Standard API (`java.util`, `java.io`)
+- Stream API
 
-## Uruchamianie
+## How to run
 
-1. Skompiluj plik `S34366Project01.java`.
-2. Uruchom program.
-3. Postępuj zgodnie z instrukcjami w konsoli.
+1. Compile `S34366Project01.java`.
+2. Run the program.
+3. Follow the instructions displayed in the console.
